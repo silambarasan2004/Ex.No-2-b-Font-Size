@@ -21,6 +21,7 @@ Step 1: Create a New Android Project:
               Next
               • Provide the desired Activity name for your project and then click Finish.
 
+
 Step 2: Create a New AVD (Android Virtual Device):
         • click Android Virtual Device Manager from the toolbar.
         • In the Android Virtual Device Manager panel, click New.
@@ -29,22 +30,24 @@ Step 2: Create a New AVD (Android Virtual Device):
         • Click Create AVD and Select the new AVD from the Android Virtual Device
         Manager and click Start.
 
+
 Step 3: Design the graphical layout with a text view and two command buttons.
+
 
 Step 4: Run the application.
 
+
 Step 5:On pressing the change font size button, the size of the font gets altered.       
+
        
 Step 6:Close the Android project. 
 
 
 ## Program:
  ```
-/*
 Program to Develop an application that uses Font Size using Android Studio .
 Developed by: Silambarasan E
 RegisterNumber:212222040156 
-*/
 ```
 
 ## MainActivity.java:
