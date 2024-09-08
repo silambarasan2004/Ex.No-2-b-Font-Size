@@ -1,9 +1,9 @@
 
-# Ex.No:2 Develop an application that uses GUI Components with Fonts and Colors
+# Ex.No:2 Develop an application that uses Font Size using Android Studio.
 
 
 ## AIM:
-To develop an application that uses GUI Components with Fonts and Colors using android studio.
+To develop an application that uses Font Size using android studio.
 
 ## EQUIPMENTS REQUIRED:
 
@@ -33,9 +33,7 @@ Step 3: Design the graphical layout with a text view and two command buttons.
 
 Step 4: Run the application.
 
-Step 5:On pressing the change font size button, the size of the font gets altered.
-
-Step 6: On pressing the Color button, the color of the text altered.
+Step 5:On pressing the change font size button, the size of the font gets altered.       
        
 Step 6:Close the Android project. 
 
@@ -44,22 +42,93 @@ Step 6:Close the Android project.
  ```
 /*
 Program to Develop an application that uses Font Size using Android Studio .
-Developed by: 
-RegisterNumber:  
+Developed by: Silambarasan E
+RegisterNumber:212222040156 
 */
 ```
 
 ## MainActivity.java:
+~~~
 
 
+package com.firstapp.fontsize;
+
+import androidx.appcompat.app.AppCompatActivity;
+
+import android.os.Bundle;
+
+import android.app.Activity;
+import android.graphics.Typeface;
+import android.graphics.Color;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 
+public class MainActivity extends AppCompatActivity {
+    float font = 24;
+    int i = 1;
+
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_main);
+        final TextView t1 = (TextView)findViewById(R.id.textView1);
+        Button b1 = (Button)findViewById(R.id.button1);
+        b1.setOnClickListener(new View.OnClickListener()    {
+            public void onClick(View view) {
+                t1.setTextSize(font);
+                font = font+4;
+                if(font==40)
+                    font = 20;
+            }
+        });
+
+
+    }
+}
+~~~
 
 ## activity_main.xml:
+~~~
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
 
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="70dp"
+        android:gravity="left"
+        android:text="HELLO WORLD"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        tools:layout_editor_absoluteX="70dp"
+        tools:layout_editor_absoluteY="376dp" />
+
+    <Button
+        android:id="@+id/button1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="20sp"
+        android:gravity="center"
+        android:text="Change Font Size"
+        tools:layout_editor_absoluteX="40dp"
+        tools:layout_editor_absoluteY="456dp" />
+    </RelativeLayout>
+
+~~~
 ## Output:
+![233335826-9b2098b4-3c60-450a-99b0-93a270dcfe23](https://user-images.githubusercontent.com/94184828/233336963-7b6effc9-ce45-4a94-9d00-2b4056ffe1c7.png)
 
+![image1](https://user-images.githubusercontent.com/94165168/235467204-c3bbdd37-9e36-4a70-9e3c-cae668b38915.jpg)
 
 
 ## Result:
-Thus, the program for android application, Font Size and color was executed successfully using Android Studio.
+Thus, the program for android application, Font Size was executed successfully using Android Studio.
